@@ -1,0 +1,25 @@
+{
+  "name": "waifu-generator",
+  "version": "1.0.0",
+  "description": "Let's pick your favorite waifu",
+  "main": "index.js",
+  "scripts": {
+    "start:scrape": "node ./index.js"
+  },
+  "keywords": [
+    "scrapper",
+    "node",
+    "anime",
+    "waifu"
+  ],
+  "author": "Satya Wikananda",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "chalk": "^4.1.0",
+    "cheerio": "^1.0.0-rc.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
