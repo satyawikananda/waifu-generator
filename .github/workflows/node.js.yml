@@ -8,25 +8,29 @@ on:
   - cron: "*/2 * * * *"
 
 jobs:
-  build:
+  auto_commit:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Setup node
-      uses: actions/setup-node@v1
-      with:
-        node-version: '>=12.14.1'
-    - name: Install dependecies
-      run: npm install
-    - name: Scrape data waifu
-      run: npm run start:scrape
-    - name: Commit files
-      run: |
-        git config --local user.email "satyawikananda456@gmail.com"
-        git config --local user.name "satyawikananda"
-        git add .
-        git commit -m "chore: Update data waifu" -a
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/checkout@v2      
+        with:
+         persist-credentials: false
+         fetch-depth: 0
+
+      - name: Install dependecies
+        run: npm install
+      - name: Scrape data waifu
+        run: npm run start:scrape
+          
+      - name: Commit changes
+        run: |
+          git config --local user.email "satyawikananda456@gmail.com"
+          git config --local user.name "satyawikananda"
+          git add .
+          git commit -m "chore: Scrape data waifu"
+          
+      - name: GitHub Push
+        uses: ad-m/github-push-action@v0.5.0
+        with:
+          force: true
+          directory: "."
+          github_token: ${{ secrets.GITHUB_TOKEN }}
