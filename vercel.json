@@ -2,7 +2,7 @@
     "redirects": [
         {
             "source": "/",
-            "destination": "https://github.com/satyawikananda/"
+            "destination": "https://github.com/satyawikananda/waifu-generator"
         }
     ],
     "headers": [
