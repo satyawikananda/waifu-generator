@@ -8,13 +8,10 @@ on:
   - cron: "*/2 * * * *"
 
 jobs:
-  auto_commit:
+  start_scrape:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2      
-        with:
-         persist-credentials: false
-         fetch-depth: 0
+      - uses: actions/checkout@v2
 
       - name: Install dependecies
         run: npm install
@@ -28,9 +25,8 @@ jobs:
           git add .
           git commit -m "chore: Scrape data waifu"
           
-      - name: GitHub Push
-        uses: ad-m/github-push-action@v0.5.0
+      - name: Push changes
+        uses: ad-m/github-push-action@master
         with:
-          force: true
-          directory: "."
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
