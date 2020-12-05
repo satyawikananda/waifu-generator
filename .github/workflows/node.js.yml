@@ -4,29 +4,27 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
   schedule:
-  - cron: "0 0 * * THU"
+    - cron: "*/5 * * * *"
 
 jobs:
   start_scrape:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-
-      - name: Install dependecies
-        run: npm install
-      - name: Scrape data waifu
-        run: npm run start:scrape
-          
-      - name: Commit changes
-        run: |
-          git config --local user.email "satyawikananda456@gmail.com"
-          git config --local user.name "satyawikananda"
-          git add .
-          git commit -m "chore: Scrape data waifu"
-          
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref }}
+    - name: Check out this repo
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+    - name: Install dependencies
+      run : npm install
+    - name: Start scrape data
+      run : npm run start:scrape
+    - name: Commit and push if it changed
+      run: |-
+        git config user.name "Automated"
+        git config user.email "actions@users.noreply.github.com"
+        git add -A
+        timestamp=$(date -u)
+        git commit -m "Latest data: ${timestamp}" || exit 0
+        git push
