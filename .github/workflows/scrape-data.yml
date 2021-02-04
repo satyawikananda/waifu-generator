@@ -22,8 +22,8 @@ jobs:
       run : npm run start:scrape
     - name: Commit and push if it changed
       run: |-
-        git config user.name "Automated"
-        git config user.email "actions@users.noreply.github.com"
+        git config user.name "satyawikananda"
+        git config user.email "${{ secrets.EMAIL }}"
         git add -A
         timestamp=$(date -u)
         git commit -m "chore(scrape): Update scrape data" || exit 0
