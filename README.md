@@ -11,35 +11,56 @@
 </div>
 
 # Description
+
 Waifu generator is an open source project and simple API to get list of waifu, the data was scrapped from [Waifu wednesday tag from Jurnal otaku](http://jurnalotaku.com/tag/waifu-wednesday/). For the tech stack, Waifu Generator was using Node js, Cheerio, axios and Vercel for serverless
 
 # API
+
 For now, Waifu Generator just have one endpoint to get the list of all data waifu and maybe will be update soon
 
-| Description | Endpoint | 
-|------------ | ---------|
-| Get all of data waifu | https://waifu-generator.vercel.app/api/v1 | 
+| Description           | Endpoint                                  |
+| --------------------- | ----------------------------------------- |
+| Get all of data waifu | https://waifu-generator.vercel.app/api/v1 |
 
 # Installation
+
 If you want to add this project in your own machine, you can install this project by following the step below
 
 1. Clone this repository
+
 ```
 git clone https://github.com/satyawikananda/waifu-generator.git
 ```
+
 2. Install dependencies
 
-In my case, i'm using pnpm for package manager, you can adjust with your favorite package manager
+For NPM
 
+```bash
+npm install
+npm run start:scrape
 ```
+
+For Yarn
+
+```bash
+yarn install
+yarn start:scrape
+```
+
+For PNPM
+
+```bash
 pnpm install
-node ./index.js
+pnpm start:scrape
 ```
 
 # Contribution
+
 Want to make this project better? You can contribute this project, I am very open if there are contributions to this project.
 
 ---
+
 ![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)
 ![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)
 
