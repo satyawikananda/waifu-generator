@@ -15,7 +15,7 @@
   "author": "Satya Wikananda",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.21.1",
+    "axios": "^0.21.2",
     "chalk": "^4.1.0",
     "cheerio": "^1.0.0-rc.3"
   },
