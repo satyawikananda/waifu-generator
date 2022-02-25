@@ -2,9 +2,9 @@
   "name": "waifu-generator",
   "version": "1.0.0",
   "description": "Let's pick your favorite waifu",
-  "main": "index.js",
+  "main": "index.mjs",
   "scripts": {
-    "start:scrape": "node ./index.js"
+    "start:scrape": "node ./index.mjs"
   },
   "keywords": [
     "scrapper",
