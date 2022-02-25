@@ -34,22 +34,6 @@ git clone https://github.com/satyawikananda/waifu-generator.git
 
 2. Install dependencies
 
-For NPM
-
-```bash
-npm install
-npm run start:scrape
-```
-
-For Yarn
-
-```bash
-yarn install
-yarn start:scrape
-```
-
-For PNPM
-
 ```bash
 pnpm install
 pnpm start:scrape
