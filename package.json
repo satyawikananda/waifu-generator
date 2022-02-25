@@ -4,7 +4,8 @@
   "description": "Let's pick your favorite waifu",
   "main": "index.mjs",
   "scripts": {
-    "start:scrape": "node ./index.mjs"
+    "start:scrape": "node ./index.mjs",
+    "format": "prettier --write './**/*.mjs'"
   },
   "keywords": [
     "scrapper",
@@ -20,7 +21,9 @@
     "cheerio": "^1.0.0-rc.10"
   },
   "devDependencies": {
-    "nodemon": "^2.0.15"
+    "@satyawikananda/prettier-config": "^0.0.3",
+    "nodemon": "^2.0.15",
+    "prettier": "^2.5.1"
   },
   "type": "module"
 }

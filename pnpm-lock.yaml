@@ -1,10 +1,12 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@satyawikananda/prettier-config': ^0.0.3
   axios: ^0.26.0
   chalk: ^5.0.0
   cheerio: ^1.0.0-rc.10
   nodemon: ^2.0.15
+  prettier: ^2.5.1
 
 dependencies:
   axios: 0.26.0
@@ -12,9 +14,15 @@ dependencies:
   cheerio: 1.0.0-rc.10
 
 devDependencies:
+  '@satyawikananda/prettier-config': 0.0.3
   nodemon: 2.0.15
+  prettier: 2.5.1
 
 packages:
+
+  /@satyawikananda/prettier-config/0.0.3:
+    resolution: {integrity: sha512-9yN/Tdyn8qzKlVaHeONZOiUQBBnFob3A8AgPBo7S5yHSc81vdfHY95Xzr1IQfkL6K6BS2xNO5PJcVSNnv4S1Mw==}
+    dev: true
 
   /@sindresorhus/is/0.14.0:
     resolution: {integrity: sha512-9NET910DNaIPngYnLLPeg+Ogzqsi9uM4mSboU5y6p8S5DzMTVEsJZrawi+BoDNUVBa2DhJqQYUFvMDfgU062LQ==}
@@ -649,6 +657,12 @@ packages:
   /prepend-http/2.0.0:
     resolution: {integrity: sha1-6SQ0v6XqjBn0HN/UAddBo8gZ2Jc=}
     engines: {node: '>=4'}
+    dev: true
+
+  /prettier/2.5.1:
+    resolution: {integrity: sha512-vBZcPRUR5MZJwoyi3ZoyQlc1rXeEck8KgeC9AwwOn+exuxLxq5toTRDTSaVrXHxelDMHy9zlicw8u66yxoSUFg==}
+    engines: {node: '>=10.13.0'}
+    hasBin: true
     dev: true
 
   /pstree.remy/1.1.8:
