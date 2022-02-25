@@ -28,8 +28,8 @@ const getWaifuFullName = (list) => {
   }
 };
 
-module.exports = {
+export default {
   getWaifuName,
   getWaifuLastName,
-  getWaifuFullName,
-};
+  getWaifuFullName
+}

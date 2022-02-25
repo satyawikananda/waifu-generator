@@ -1,6 +1,6 @@
-const axios = require('axios').default
-const cheerio = require('cheerio')
-const chalk = require('chalk')
+import axios from "axios"
+import cheerio from "cheerio"
+import chalk from "chalk"
 
 const data = []
 const WaifuGenerator = (url) => {
@@ -34,4 +34,4 @@ const WaifuGenerator = (url) => {
     })
 }
 
-module.exports = WaifuGenerator
+export default WaifuGenerator
