@@ -15,11 +15,11 @@
   "author": "Satya Wikananda",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.21.2",
-    "chalk": "^4.1.0",
-    "cheerio": "^1.0.0-rc.3"
+    "axios": "^0.26.0",
+    "chalk": "^5.0.0",
+    "cheerio": "^1.0.0-rc.10"
   },
   "devDependencies": {
-    "nodemon": "^2.0.6"
+    "nodemon": "^2.0.15"
   }
 }
