@@ -39,6 +39,10 @@ pnpm install
 pnpm start:scrape
 ```
 
+# Related projects
+
+- [Waifu Generator](https://github.com/moepoi/WaifuGenerator) (PHP) by [Moepoi](https://github.com/moepoi)
+
 # Contribution
 
 Want to make this project better? You can contribute this project, I am very open if there are contributions to this project.
