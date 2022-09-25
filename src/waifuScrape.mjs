@@ -25,11 +25,15 @@ const WaifuGenerator = (url) => {
               .text()
               .replace("[Waifu Wednesday]", "")
               .trim()
-            data.push({
-              image,
-              anime,
-              name,
-            })
+              axios.get(encodeURI(image)).then((r) => {
+                if (r.status === 200) {
+                  data.push({
+                    image,
+                    anime,
+                    name,
+                  })
+                }
+              }).catch((e) => { console.log(image, e.message) });
           })
           const nextUrlPage = $(".nextpostslink").attr("href")
           if (nextUrlPage === undefined) return false
