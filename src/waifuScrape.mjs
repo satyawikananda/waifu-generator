@@ -26,7 +26,7 @@ const WaifuGenerator = (url) => {
               .replace("[Waifu Wednesday]", "")
               .trim()
               axios.get(encodeURI(image)).then((r) => {
-                if (r.status === 200) {
+                if (r.status == 200) {
                   data.push({
                     image,
                     anime,
